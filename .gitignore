@@ -1,0 +1,32 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+.tfsec
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# lock file dont work with local arm and remote amd machines
+.terraform.lock.hcl
+
+# plan/.out files
+*.out
+*.plan
+*tmp*
+
+# keys / sensitive files
+*.pem
+*.key
+id_rsa*
+*.dec
+
+# misc
+**/.DS_Store
+/.idea/
+**/node_modules/
+*tmp*
+reports
+.infracost
+.envrc
