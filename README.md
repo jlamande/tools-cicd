@@ -1,5 +1,12 @@
 # Tools CICD
 
+Sample infrastructure setup on AWS EC2 of :
+
+- Ansible
+- Packer
+- Terraform
+- Jenkins
+
 ## Setup
 
 ```
@@ -18,22 +25,13 @@ terraform destroy
 
 ### SSH
 
-You can access the Tools EC2 instance through SSH with one of the following commands : 
-
-```sh
-ssh -i ./id_rsa ubuntu@ec2-34-251-116-64.eu-west-1.compute.amazonaws.com
-# or
-ssh -i ./id_rsa ubuntu@34.251.116.64
-```
+To access the Tools EC2 instance through SSH, follow the instructions in the generated `NOTES.md` file.
 
 ### Jenkins
 
-Access to Jenkins UI :
+To access the Jenkins UI, follow the instructions in the generated `NOTES.md` file.
 
- - http://ec2-34-251-116-64.eu-west-1.compute.amazonaws.com:8080
- - http://34.251.116.64:8080
-
-On fresh install :
+On a fresh install :
 
 - wait for a few minutes after terraform ended to apply
 - you will need to retrieve the admin password on the EC2 in the `/var/lib/jenkins/secrets/initialAdminPassword` file*

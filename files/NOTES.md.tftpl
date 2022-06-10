@@ -1,0 +1,18 @@
+# Tools CICD Access
+
+## SSH
+
+You can access the Tools EC2 instance through SSH with one of the following commands : 
+
+```sh
+ssh -i ./id_rsa ubuntu@${tools_dns}
+# or
+ssh -i ./id_rsa ubuntu@${tools_ip}
+```
+
+## Jenkins
+
+Access to Jenkins UI :
+
+ - http://${tools_dns}:8080
+ - http://${tools_ip}:8080

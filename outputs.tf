@@ -7,7 +7,7 @@ output "ssh_key_fingerprint" {
 }
 
 locals {
-  access_doc = templatefile("${path.module}/files/README.md.tftpl", {
+  access_doc = templatefile("${path.module}/files/NOTES.md.tftpl", {
     tools_dns = aws_instance.tools.public_dns
     tools_ip = aws_instance.tools.public_ip
   })
@@ -26,5 +26,5 @@ EOT
 
 resource "local_file" "notes" {
   content  = local.access_doc
-  filename = "${path.module}/README.md"
+  filename = "${path.module}/NOTES.md"
 }
